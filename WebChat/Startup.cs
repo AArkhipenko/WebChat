@@ -7,6 +7,7 @@ using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.WebSockets;
 using System.Threading.Tasks;
 
 namespace WebChat
@@ -45,6 +46,9 @@ namespace WebChat
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseWebSockets();
+            app.UseMiddleware<ChatMiddleWare>();
 
             app.UseEndpoints(endpoints =>
             {
