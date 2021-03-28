@@ -1,0 +1,20 @@
+﻿body {
+}
+
+textarea{
+    width: 100%;
+    min-height:500px;
+}
+
+div.chat {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+    padding: 20px;
+    background-color: #fafafa;
+
+}
+
+#text_message{
+    width: 100%
+}

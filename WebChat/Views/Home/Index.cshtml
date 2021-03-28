@@ -1,8 +1,28 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Chat";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+@section Scripts{
+    <script src="~/js/chatwebsocket.js"></script>
+    <script src="~/js/home/index.js"></script>
+}
+
+@section Styles{
+    <link rel="stylesheet" href="~/css/home/index.css" />
+}
+
+
+<div class="chat">
+    <div class="history">
+        <textarea id="message_buffer"></textarea>
+        <br />
+        <input id="text_message" type="text" />
+    </div>
+    <div class="users">
+        <table id="users_list">
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
 </div>
